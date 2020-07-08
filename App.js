@@ -51,7 +51,7 @@ export default function App() {
     content = (
       <GameOverScreen
         roundsNumber={guessRounds}
-        userNumber={userNumber}
+        userNumber={1}
         onRestart={configureNewGameHandler}
       />
     );
