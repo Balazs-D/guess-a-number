@@ -103,8 +103,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: 20,
-    marginVertical: 10,
+    fontSize: 25,
+    marginVertical: 20,
+    fontFamily: "open-sans-bold",
   },
   inputCont: {
     width: 300,
