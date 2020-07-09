@@ -1,14 +1,21 @@
 import React from "react";
 import { View, Text, StyleSheet, Button, Image } from "react-native";
 import BodyText from "../components/BodyText";
+import Colors from "../constants/colors";
 
 const GameOverScreen = (props) => {
   return (
     <View style={styles.screen}>
-      <BodyText>The Game is Over!</BodyText>
+      <BodyText style={styles.title}>The Game is Over!</BodyText>
+      <View style={styles.resultCont}>
+        <BodyText style={styles.resultTextCont}>
+          Your phone needed{" "}
+          <Text style={styles.highlight}>{props.roundsNumber}</Text> rounds to
+          guess the number{" "}
+          <Text style={styles.highlight}>{props.userNumber}</Text>.
+        </BodyText>
+      </View>
 
-      <BodyText>Number of Rounds: {props.roundsNumber}</BodyText>
-      <BodyText>Guessed Number was: {props.userNumber}</BodyText>
       <View style={styles.imageCont}>
         <Image
           style={styles.image}
@@ -31,6 +38,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  title: {
+    marginVertical: 20,
+    fontSize: 30,
+  },
   imageCont: {
     width: 300,
     height: 300,
@@ -49,6 +60,15 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
+  },
+  resultCont: {},
+  resultTextCont: {
+    marginHorizontal: 50,
+    textAlign: "center",
+    fontSize: 20,
+  },
+  highlight: {
+    color: Colors.primary,
   },
 });
 
