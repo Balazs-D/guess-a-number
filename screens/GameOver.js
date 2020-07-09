@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Button, Image } from "react-native";
 import BodyText from "../components/BodyText";
 import Colors from "../constants/colors";
+import MainButton from "../components/MainButton";
 
 const GameOverScreen = (props) => {
   return (
@@ -27,7 +28,7 @@ const GameOverScreen = (props) => {
           // source={require("../assets/success.png")}
         />
       </View>
-      <Button title="New Game" onPress={props.onRestart}></Button>
+      <MainButton onPress={props.onRestart}>New Game</MainButton>
     </View>
   );
 };
