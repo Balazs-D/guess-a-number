@@ -109,8 +109,9 @@ const styles = StyleSheet.create({
     fontFamily: "open-sans-bold",
   },
   inputCont: {
-    width: 300,
+    width: "80%",
     maxWidth: "80%",
+    minWidth: 300,
     alignItems: "center",
   },
   buttonCont: {
