@@ -6,6 +6,7 @@ import {
   Alert,
   ScrollView,
   FlatList,
+  Dimensions,
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Card from "../components/Card";
@@ -117,12 +118,12 @@ const styles = StyleSheet.create({
   buttonCont: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginTop: 20,
+    marginTop: Dimensions.get("window").height > 600 ? 20 : 0,
     width: 400,
     maxWidth: "90%",
   },
   listCont: {
-    width: "90%",
+    width: Dimensions.get("window").width > 350 ? "60%" : "100%",
     flex: 1,
   },
   list: {
@@ -139,7 +140,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderRadius: 12,
     justifyContent: "space-around",
-    width: "50%",
+    width: Dimensions.get("window").width > 350 ? "60%" : "90%",
   },
 });
 
